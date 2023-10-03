@@ -1,0 +1,10 @@
+m,n=map(int,input().split())
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+c=sorted(a+b)
+k=(m+n)//2 
+if((m+n)%2==1):
+    print(c[k])
+else:
+   p=(c[k]+c[k-1])/2
+   print(str(p).rstrip('0').rstrip('.'))

@@ -1,18 +1,18 @@
-s=list(map(int,input().split()))
-n=int(input())
-d=0
-ans=0
-for i in s:
-    if(i==1):
-        if(d%2):
-            ans+=d//2
-        elif(d%2==0 and d>=2):ans+=(d//2)-1
-        d=0
-    else:
-        d+=1
-ans+=d//2
-if(ans>=n):print("true")
-else:print("false")
+#chance of planting a flower-->30
+l=list(map(int,input().split()))
+k=int(input())
+n=len(l)
+c=0
+for i in range(1,n-1):
+    if l[i-1]==0 and l[i+1]==0 and l[i]==0:
+        c+=1
+        l[i]=1
+if l[-1]==0 and l[-2]==0:
+    c+=1
+if c>=k:
+    print('true')
+else:
+    print('false')
 '''
 Chance of Planting Flower
 Program Description :

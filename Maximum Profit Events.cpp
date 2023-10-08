@@ -1,3 +1,43 @@
+/*
+Maximum Profit Events
+Program Description :
+Given a list events of n intervals, the ith element [s, e, p] denotes the starting point s, ending point e, and the profit p earned by choosing the ith event. Find the maximum profit one can achieve by choosing a subset of non-overlapping events.
+
+Two events [s1, e1, p1] and [s2, e2, p2] are said to be non-overlapping if [e1 <= s2] and [s1 < s2]. 
+
+Input Format :
+First line denotes a single integer n representing the number of events.
+
+The n subsequent lines contains three space separated integers s, e, p of an event respectively.
+
+Output Format :
+A single integer representing the maximum profit earned by choosing a subset of events.
+
+Input :
+3
+
+1 2 4
+
+1 5 7
+
+2 4 4
+
+
+Output :
+8
+
+Explanation:
+
+By choosing the events [1, 2, 4] and [2, 4, 4], we can get a maximum profit of 8 as they are non-overlapping.
+
+
+Constraints :
+1 <= n <= 10^5
+
+1 <= s < e <= 10^5
+
+1 <= p <= 10^5
+*/
 #include<bits/stdc++.h>
 using namespace std;
 int main()

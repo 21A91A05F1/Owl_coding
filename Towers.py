@@ -1,18 +1,18 @@
+#Towers-->28
 n=int(input())
-t=[-1]*n
 l=list(map(int,input().split()))
-c=0
-while(l!=t):
-    p=-1
-    for i in range(n):
-        if p==-1 and l[i]!=-1:
-            p=l[i]
-            l[i]=-1
-        elif p!=-1 and l[i]!=-1 and p>l[i]:
-            p=l[i]
-            l[i]=-1
-    c+=1
-print(c)
+ans=[]
+ans.append(l[0])
+for i in range(1,n):
+    if ans[-1]<=l[i]:
+        ans.append(l[i])
+    else:
+        ans.sort()
+        for j in range(len(ans)):
+            if l[i]<ans[j]:
+                ans[j]=l[i]
+                break
+print(len(ans))
 '''
 Towers
 Program Description :

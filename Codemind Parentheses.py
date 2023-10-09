@@ -1,34 +1,17 @@
-#include<bits/stdc++.h>
-using namespace std;
-int main()
-{
-    string s,res;
-    cin>>s;
-    stack<char>st;
-    int i=0;
-    while(i<s.size())
-    {
-        if(s[i]==')')
-        {
-            string temp;
-           while(!st.empty() and i<s.size() and st.top()=='(' and s[i]==')')
-           {
-                auto t=st.top();
-                st.pop();
-                if(!st.empty())
-                {
-                    temp=t+temp;
-                    temp+=s[i];
-                }
-                i++;
-           }
-           res+=temp;
-        }
-        else st.push(s[i++]);
-    }
-    cout<<res<<endl;
-}
-/*
+s=input()
+op_c=0
+result=""
+for i in s:
+    if i=='(':
+        if(op_c>0):
+            result+='('
+        op_c+=1
+    elif(i==')'):
+        op_c-=1
+        if(op_c>0):
+            result+=')'
+print(result) 
+'''
 LEVEL-2/HARD/POINTS: 80
 Codemind Parentheses
 Program Description :
@@ -54,6 +37,7 @@ Input :
 
 Output :
 ()()() 
+'''
 
 
 Constraints :

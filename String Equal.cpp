@@ -1,3 +1,14 @@
+/*
+a = list(str(input()))
+b = list(str(input()))
+if len(a)!=len(b):
+    print(0)
+elif sorted(list(set(a)))==sorted(list(set(b))):
+    print(1)
+else:
+    print(0)
+
+*/
 #include<bits/stdc++.h>
 using namespace std;
 int main()

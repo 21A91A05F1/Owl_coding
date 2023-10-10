@@ -16,3 +16,4 @@ int main()
     cin>>n;
     cout<<fun(n,0);
 }
+//cout<<(n+1)*(N+2)*(N+3)*(N+4)//24

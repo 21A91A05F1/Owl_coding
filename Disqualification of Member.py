@@ -1,21 +1,16 @@
-def moon(l: list, i=1):
-    if len(l) == 1:
-        return l
-    elif i % 2 != 0:
-        r = []
-        for j in range(1, len(l), 2):
-            r.append(l[j])
-        return moon(r, i + 1)
-    else:
-        l.reverse()
-        r = []
-        for j in range(1, len(l), 2):
-            r.append(l[j])
-        r.reverse()
-        return moon(r, i + 1)
-n = int(input())
-a = moon([i for i in range(1, n + 1)])
-print(a[0])
+#disqualification of number
+n=int(input())
+l=[]
+for i in range(1,n+1):
+    l.append(i)
+
+while(len(l)>1):
+    arr=[]
+    for i in range(1,len(l),2):
+        arr.append(l[i])
+    arr=arr[::-1]
+    l=arr
+print(*l)
 '''
 Disqualification of Member
 Program Description :

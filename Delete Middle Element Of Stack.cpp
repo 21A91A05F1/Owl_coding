@@ -1,3 +1,16 @@
+/*
+n=int(input())
+a=list(map(int,input().split()))
+k=n//2
+if(n%2==0):
+    k-=1
+for i in range(n):
+    if(i==k):
+        continue
+    else:
+        print(a[i],end=" ")
+
+*/
 #include<bits/stdc++.h>
 using namespace std;
 void fun(stack<int>&s, int sizeOfStack)

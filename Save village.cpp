@@ -1,3 +1,14 @@
+/*
+n=int(input())
+l=list(map(int,input().split()))
+c=0
+for i in range(n):
+    for j in range(i+1,n):
+        if l[j]>l[i]:
+            c+=l[j]
+            break
+print(c%1000000001)
+*/
 #include<bits/stdc++.h>
 using namespace std;
 int main(){

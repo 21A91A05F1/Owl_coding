@@ -54,7 +54,7 @@ for i in range(n):
     if(arr[i]<=mini):
         mini=arr[i]
         k=i 
-    elif(arr[i]>maxi):
+    if(arr[i]>maxi):
         maxi=arr[i]
         l=i 
     elif(arr[i]==maxi):
